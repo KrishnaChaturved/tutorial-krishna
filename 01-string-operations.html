@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>string-operations</h1>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+    
+    <button id="print" onclick="readName()">print</button>
+    <div id="nameResult"></div>
+    <script>
+
+        function readName(){
+            let name = document.querySelector("#name").value;
+            console.log(name);
+            printName(name);
+        }
+        function printName(name) {
+            let container = document.querySelector("#nameResult");
+            for (let index = 0; index < name.length; index++) {
+                let element = name[index];
+                // console.log(name[index])
+                let cont = document.createElement("div");
+                 cont.innerText = element;
+                 container.appendChild(cont);
+            }
+
+        }
+
+
+    </script>
 </body>
+
 </html>
