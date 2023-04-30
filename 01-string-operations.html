@@ -9,13 +9,32 @@
 </head>
 
 <body>
-    <h1>string-operations</h1>
+    <!-- <h1>string-operations</h1>
+    <div class="sample 1">
     <label for="name">Name</label>
     <input type="text" id="name" name="name">
     
     <button id="print" onclick="readName()">print</button>
     <div id="nameResult"></div>
+    </div> -->
+    <div class="sample-2">
+        <label for="name">schetction</label>
+        <input type="text" id="mr" name="name"/>
+        <br>
+        <label for="name">first Name</label>
+        <input type="text" id="firstName" name="name"/>
+        <br>
+        <label for="name">last Name</label>
+        <input type="text" id="lastName" name="name"/>
+        <br>
+        <button id="print" onclick="Greatperson()">Great person</button>
+    <div id="nameResult"></div>
+        
+    </div>
+    <h4></h4>
     <script>
+//#region sample-1
+
 
         function readName(){
             let name = document.querySelector("#name").value;
@@ -26,13 +45,24 @@
             let container = document.querySelector("#nameResult");
             for (let index = 0; index < name.length; index++) {
                 let element = name[index];
-                // console.log(name[index])
+                
                 let cont = document.createElement("div");
                  cont.innerText = element;
                  container.appendChild(cont);
             }
 
         }
+//#endregion
+    //#region sample-2
+    function Greatperson(){
+            let name = document.querySelector("#mr").value;
+            let firstName = document.querySelector("#firstName").value;
+            let lastName = document.querySelector("#lastName").value;
+
+           var fullName = "hello!" +"&nbsp"+ name +"&nbsp"+ firstName +"&nbsp"+ lastName;
+            document.querySelector("#nameResult").innerHTML = fullName;
+        }
+    //#endregion
 
 
     </script>
