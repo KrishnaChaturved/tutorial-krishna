@@ -33,14 +33,14 @@
     </div> -->
     <div>
         <label for="search">string</label>
-        <input type="text" id="Iamgenius"/>
+        <input type="text" id="str"/>
         <br>
-        <label for="search">search</label>
-        <input type="text" id="sch"/>
+        <label for="search">char</label>
+        <input type="text" id="searchCharacter"/>
         <br>
-        <button id="search" onclick="searchCharacter()">search</button>
-        <div id="searchString"></div>
-    </div>
+        <button id="search" onclick="countCharacter()">count</button>
+        <div id="countResult"></div>
+    </div> 
     <script>
 //#region sample-1
 
@@ -75,25 +75,25 @@
 //#region search in string
 
 
-function searchCharacter(){
-    let string = document.querySelector('#Iamgenius').value;
-    let search = document.querySelector('#sch').value;
-    // var searchString = Iamgenius + sch;
-    // document.querySelector(searchString).innerHTML = searchString;
-for ( i= 0; i <string.length; i++) {
-    const element = string[i];
-    if ( element === search) {
-        // charFound = true;
-        let result = (`${search} is at position ${i + 1}`);
-    let container =  document.querySelector('#searchString');
-    let div = document.createElement('div');
-    div.innerText = result;
-    container.appendChild(div);
+// function searchCharacter(){
+//     let string = document.querySelector('#Iamgenius').value;
+//     let search = document.querySelector('#sch').value;
+//     // var searchString = Iamgenius + sch;
+//     // document.querySelector(searchString).innerHTML = searchString;
+// for ( i= 0; i <string.length; i++) {
+//     const element = string[i];
+//     if ( element === search) {
+//         // charFound = true;
+//         let result = (`${search} is at position ${i + 1}`);
+//     let container =  document.querySelector('#searchString');
+//     let div = document.createElement('div');
+//     div.innerText = result;
+//     container.appendChild(div);
    
-        // console.log(`${search} is at position ${i + 1}`);
-        break;
-    } 
-}
+//         // console.log(`${search} is at position ${i + 1}`);
+//         break;
+//     } 
+// }
 // if (charFound === false) {
 //     console.log(`${search} not found`);
 // }
@@ -101,10 +101,50 @@ for ( i= 0; i <string.length; i++) {
     // var searchSt = (searchString).innerText;
 
 
-}
+// }
 
 
 //#endregion
+//##region count character
+//  function char_count(str, letter) 
+// {
+//  var letter_Count = 0;
+//  for (var position = 0; position < str.length; position++) 
+//  {
+//     if (str.charAt(position) == letter) 
+//       {
+//       letter_Count += 1;
+//       }
+//   }
+//   return letter_Count;
+// }
+
+// console.log(char_count('hi how are you', 'a'));
+
+// let string = "hi how are you";
+// let char = "h";
+function countCharacter(){
+    let string = document.querySelector('#str').value;
+    let char = document.querySelector('#searchCharacter').value;
+    // var countCharacter = count + counter;
+    // document.querySelector(countResult).innerHTML = countCharacter;
+    let counter = 0;
+    for (let i = 0; i < string.length; i++) {
+        if(string[i]===char){
+            counter = counter +1;
+
+        } 
+       
+    }
+    let div = document.createElement("div");
+        let container = document.querySelector("#countResult");
+
+                 div.innerText = `Total ${char} = ${counter}`;
+                 container.appendChild(div);
+        
+    
+}
+//##endregion
 
     </script>
 </body>
