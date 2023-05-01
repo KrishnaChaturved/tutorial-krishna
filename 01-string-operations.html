@@ -31,7 +31,17 @@
     <div id="nameResult"></div>
         
     </div> -->
-    <div>
+    <div class="sample3">
+        <label for="name">reverseString1</label>
+        <input type="text" id="str"/>
+        <br>
+        <button id="print" onclick="reversestr()">reverse1</button>
+    <div id="reverseString"></div>
+        
+    </div> 
+
+    </div>
+    <!-- <div>
         <label for="search">string</label>
         <input type="text" id="str"/>
         <br>
@@ -40,7 +50,7 @@
         <br>
         <button id="search" onclick="countCharacter()">count</button>
         <div id="countResult"></div>
-    </div> 
+    </div>  -->
     <script>
 //#region sample-1
 
@@ -126,8 +136,6 @@
 function countCharacter(){
     let string = document.querySelector('#str').value;
     let char = document.querySelector('#searchCharacter').value;
-    // var countCharacter = count + counter;
-    // document.querySelector(countResult).innerHTML = countCharacter;
     let counter = 0;
     for (let i = 0; i < string.length; i++) {
         if(string[i]===char){
@@ -144,6 +152,25 @@ function countCharacter(){
         
     
 }
+//##endregion
+//##region string reverse
+
+function reversestr(){
+    let str = document.querySelector('#str').value;
+    let reverseString = ''
+    for (let index = str.length -1; index>=0;index--) {
+        char = str[index];
+        reverseString = reverseString + char
+    }
+        let container = document.querySelector("#reverseString");
+
+        let div = document.createElement("div");
+        div.innerText =  `${reverseString}`;
+                 container.appendChild(div);
+
+
+}  
+
 //##endregion
 
     </script>
