@@ -52,19 +52,27 @@
         <div id="countResult"></div>
     </div>  -->
 
-    <div id="sample4"> 
-      <label for="">String</label> 
+    <!-- <div id="sample4"> 
+      <label for="">palindraneString</label> 
       <input type="text" name="" id="inputString"> 
       <br>
       <input type="button" value="Print" onclick="findEvenOdd()"> 
       <div id="evenOddResult"> 
       </div> 
-    </div>
+    </div> -->
+    <!-- <div id="sample4"> 
+      <label for="">palindraneString</label> 
+      <input type="text" name="" id="palindraneCheck"> 
+      <br>
+      <input type="button" value="Print" onclick="palindraneTrueFalse()"> 
+      <div id="palindraneResult"> 
+      </div> 
+    </div> -->
     <script>
-//#region sample-1
+        //#region sample-1
 
 
-        function readName(){
+        function readName() {
             let name = document.querySelector("#name").value;
             console.log(name);
             printName(name);
@@ -73,139 +81,198 @@
             let container = document.querySelector("#nameResult");
             for (let index = 0; index < name.length; index++) {
                 let element = name[index];
-                
+
                 let cont = document.createElement("div");
-                 cont.innerText = element;
-                 container.appendChild(cont);
+                cont.innerText = element;
+                container.appendChild(cont);
             }
 
         }
-//#endregion
-    //#region sample-2
-    // function Greatperson(){
-    //         let name = document.querySelector("#mr").value;
-    //         let firstName = document.querySelector("#firstName").value;
-    //         let lastName = document.querySelector("#lastName").value;
+        //#endregion
+        //#region sample-2
+        // function Greatperson(){
+        //         let name = document.querySelector("#mr").value;
+        //         let firstName = document.querySelector("#firstName").value;
+        //         let lastName = document.querySelector("#lastName").value;
 
-    //        var fullName = "hello!" +"&nbsp"+ name +"&nbsp"+ firstName +"&nbsp"+ lastName;
-    //         document.querySelector("#nameResult").innerHTML = fullName;
-    //     }
-    //#endregion
-//#region search in string
-
-
-// function searchCharacter(){
-//     let string = document.querySelector('#Iamgenius').value;
-//     let search = document.querySelector('#sch').value;
-//     // var searchString = Iamgenius + sch;
-//     // document.querySelector(searchString).innerHTML = searchString;
-// for ( i= 0; i <string.length; i++) {
-//     const element = string[i];
-//     if ( element === search) {
-//         // charFound = true;
-//         let result = (`${search} is at position ${i + 1}`);
-//     let container =  document.querySelector('#searchString');
-//     let div = document.createElement('div');
-//     div.innerText = result;
-//     container.appendChild(div);
-   
-//         // console.log(`${search} is at position ${i + 1}`);
-//         break;
-//     } 
-// }
-// if (charFound === false) {
-//     console.log(`${search} not found`);
-// }
-
-    // var searchSt = (searchString).innerText;
+        //        var fullName = "hello!" +"&nbsp"+ name +"&nbsp"+ firstName +"&nbsp"+ lastName;
+        //         document.querySelector("#nameResult").innerHTML = fullName;
+        //     }
+        //#endregion
+        //#region search in string
 
 
-// }
+        // function searchCharacter(){
+        //     let string = document.querySelector('#Iamgenius').value;
+        //     let search = document.querySelector('#sch').value;
+        //     // var searchString = Iamgenius + sch;
+        //     // document.querySelector(searchString).innerHTML = searchString;
+        // for ( i= 0; i <string.length; i++) {
+        //     const element = string[i];
+        //     if ( element === search) {
+        //         // charFound = true;
+        //         let result = (`${search} is at position ${i + 1}`);
+        //     let container =  document.querySelector('#searchString');
+        //     let div = document.createElement('div');
+        //     div.innerText = result;
+        //     container.appendChild(div);
+
+        //         // console.log(`${search} is at position ${i + 1}`);
+        //         break;
+        //     } 
+        // }
+        // if (charFound === false) {
+        //     console.log(`${search} not found`);
+        // }
+
+        // var searchSt = (searchString).innerText;
 
 
-//#endregion
-//##region count character
-//  function char_count(str, letter) 
-// {
-//  var letter_Count = 0;
-//  for (var position = 0; position < str.length; position++) 
-//  {
-//     if (str.charAt(position) == letter) 
-//       {
-//       letter_Count += 1;
-//       }
-//   }
-//   return letter_Count;
-// }
+        // }
 
-// console.log(char_count('hi how are you', 'a'));
 
-// let string = "hi how are you";
-// let char = "h";
-// function countCharacter(){
-//     let string = document.querySelector('#str').value;
-//     let char = document.querySelector('#searchCharacter').value;
-//     let counter = 0;
-//     for (let i = 0; i < string.length; i++) {
-//         if(string[i]===char){
-//             counter = counter +1;
+        //#endregion
+        //##region count character
+        //  function char_count(str, letter) 
+        // {
+        //  var letter_Count = 0;
+        //  for (var position = 0; position < str.length; position++) 
+        //  {
+        //     if (str.charAt(position) == letter) 
+        //       {
+        //       letter_Count += 1;
+        //       }
+        //   }
+        //   return letter_Count;
+        // }
 
-//         } 
-       
+        // console.log(char_count('hi how are you', 'a'));
+
+        // let string = "hi how are you";
+        // let char = "h";
+        // function countCharacter(){
+        //     let string = document.querySelector('#str').value;
+        //     let char = document.querySelector('#searchCharacter').value;
+        //     let counter = 0;
+        //     for (let i = 0; i < string.length; i++) {
+        //         if(string[i]===char){
+        //             counter = counter +1;
+
+        //         } 
+
+        //     }
+        //     let div = document.createElement("div");
+        //         let container = document.querySelector("#countResult");
+
+        //                  div.innerText = `Total ${char} = ${counter}`;
+        //                  container.appendChild(div);
+
+
+        // }
+        //##endregion
+        //##region string reverse
+
+        // function reversestr(){
+        //     let str = document.querySelector('#str').value;
+        //     let reverseString = ''
+        //     for (let index = str.length -1; index>=0;index--) {
+        //         char = str[index];
+        //         reverseString = reverseString + char
+        //     }
+        //         let container = document.querySelector("#reverseString");
+
+        //         let div = document.createElement("div");
+        //         div.innerText =  `${reverseString}`;
+        //                  container.appendChild(div);
+
+
+        // }  
+
+        //##endregion odd even
+        // function findEvenOdd(){ 
+        //           let even =""; 
+        //           let odd =""; 
+        //           let takeString1 = document.querySelector("#inputString").value; 
+        //           console.log(takeString1);
+        //           for (let index = 0; index < takeString1.length; index++) { 
+        //             const element = takeString1[index]; 
+        //             if((index+1)%2==0){ 
+        //               even += element;  
+        //             } 
+        //             else{
+        //               odd +=element; 
+        //             }
+
+        //           } 
+        //           let container = document.querySelector("#evenOddResult"); 
+        //           let para = document.createElement("p"); 
+        //           let para1 = document.createElement("p"); 
+        //           para.innerText = "Even String  -  "+even; 
+        //           para1.innerText = "odd String  -  "+odd 
+        //           container.appendChild(para); 
+        //           container.appendChild(para1); 
+        //         }
+        //##region odd even
+
+
+        /*package whatever //do not write package name here */
+
+        // program to check if the string is palindrome or not
+
+// function palindraneTrueFalse() {
+
+// // find the length of a string
+// const len = string.length;
+
+// // loop through half of the string
+// for (let i = 0; i < len / 2; i++) {
+
+//     // check if first and last string are same
+//     if (string[i] !== string[len - 1 - i]) {
+//         return 'It is not a palindrome';
 //     }
-//     let div = document.createElement("div");
-//         let container = document.querySelector("#countResult");
-
-//                  div.innerText = `Total ${char} = ${counter}`;
-//                  container.appendChild(div);
-        
-    
 // }
-//##endregion
-//##region string reverse
+// return 'It is a palindrome';
+// }
 
-function reversestr(){
-    let str = document.querySelector('#str').value;
-    let reverseString = ''
-    for (let index = str.length -1; index>=0;index--) {
-        char = str[index];
-        reverseString = reverseString + char
-    }
-        let container = document.querySelector("#reverseString");
+// // take input
+// const string = prompt('Enter a string: ');
 
-        let div = document.createElement("div");
-        div.innerText =  `${reverseString}`;
-                 container.appendChild(div);
+// // call the function
+// // const value = checkPalindrome(string);
 
-
-}  
-
-//##endregion odd even
-function findEvenOdd(){ 
-          let even =""; 
-          let odd =""; 
-          let takeString1 = document.querySelector("#inputString").value; 
-          console.log(takeString1);
-          for (let index = 0; index < takeString1.length; index++) { 
-            const element = takeString1[index]; 
-            if((index+1)%2==0){ 
-              even += element;  
-            } 
-            else{
-              odd +=element; 
-            }
-             
-          } 
-          let container = document.querySelector("#evenOddResult"); 
-          let para = document.createElement("p"); 
-          let para1 = document.createElement("p"); 
-          para.innerText = "Even String  -  "+even; 
-          para1.innerText = "odd String  -  "+odd 
-          container.appendChild(para); 
-          container.appendChild(para1); 
+// console.log(value);
+// function that check str is palindrome or not
+function check_palindrome(str) {
+    let j = str.length - 1;
+    for (let i = 0; i < j / 2; i++) {
+        let x = str[i];//forward character
+        let y = str[j - i];//backward character
+        if (x != y) {
+            // return false if string not match
+            return false;
         }
-//##region odd even
-
+    }
+    /// return true if string is palindrome
+    return true;
+ 
+}
+ 
+//function that print output if string is palindrome
+function is_palindrome(str) {
+    // variable that is true if string is palindrome
+    let ans = check_palindrome(str);
+    //condition checking ans is true or not
+    if (ans == true) {
+        console.log("palindrome true");
+    }
+    else {
+        console.log(" palindrome false");
+    }
+}
+// test variable
+let test = "level";
+is_palindrome(test);
 
 
     </script>
