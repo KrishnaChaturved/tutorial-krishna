@@ -31,7 +31,7 @@
     <div id="nameResult"></div>
         
     </div> -->
-    <div class="sample3">
+    <!-- <div class="sample3">
         <label for="name">reverseString1</label>
         <input type="text" id="str"/>
         <br>
@@ -40,7 +40,7 @@
         
     </div> 
 
-    </div>
+    </div> -->
     <!-- <div>
         <label for="search">string</label>
         <input type="text" id="str"/>
@@ -51,6 +51,15 @@
         <button id="search" onclick="countCharacter()">count</button>
         <div id="countResult"></div>
     </div>  -->
+
+    <div id="sample4"> 
+      <label for="">String</label> 
+      <input type="text" name="" id="inputString"> 
+      <br>
+      <input type="button" value="Print" onclick="findEvenOdd()"> 
+      <div id="evenOddResult"> 
+      </div> 
+    </div>
     <script>
 //#region sample-1
 
@@ -133,25 +142,25 @@
 
 // let string = "hi how are you";
 // let char = "h";
-function countCharacter(){
-    let string = document.querySelector('#str').value;
-    let char = document.querySelector('#searchCharacter').value;
-    let counter = 0;
-    for (let i = 0; i < string.length; i++) {
-        if(string[i]===char){
-            counter = counter +1;
+// function countCharacter(){
+//     let string = document.querySelector('#str').value;
+//     let char = document.querySelector('#searchCharacter').value;
+//     let counter = 0;
+//     for (let i = 0; i < string.length; i++) {
+//         if(string[i]===char){
+//             counter = counter +1;
 
-        } 
+//         } 
        
-    }
-    let div = document.createElement("div");
-        let container = document.querySelector("#countResult");
+//     }
+//     let div = document.createElement("div");
+//         let container = document.querySelector("#countResult");
 
-                 div.innerText = `Total ${char} = ${counter}`;
-                 container.appendChild(div);
+//                  div.innerText = `Total ${char} = ${counter}`;
+//                  container.appendChild(div);
         
     
-}
+// }
 //##endregion
 //##region string reverse
 
@@ -171,7 +180,33 @@ function reversestr(){
 
 }  
 
-//##endregion
+//##endregion odd even
+function findEvenOdd(){ 
+          let even =""; 
+          let odd =""; 
+          let takeString1 = document.querySelector("#inputString").value; 
+          console.log(takeString1);
+          for (let index = 0; index < takeString1.length; index++) { 
+            const element = takeString1[index]; 
+            if((index+1)%2==0){ 
+              even += element;  
+            } 
+            else{
+              odd +=element; 
+            }
+             
+          } 
+          let container = document.querySelector("#evenOddResult"); 
+          let para = document.createElement("p"); 
+          let para1 = document.createElement("p"); 
+          para.innerText = "Even String  -  "+even; 
+          para1.innerText = "odd String  -  "+odd 
+          container.appendChild(para); 
+          container.appendChild(para1); 
+        }
+//##region odd even
+
+
 
     </script>
 </body>
