@@ -1,0 +1,194 @@
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 100%;
+    font-family: "Roboto", sans-serif;
+    color: #3d3536;
+    background-color: white;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  a {
+    color: #a6989a;
+  }
+  .cd-container {
+    width: 90%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .cd-container::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .cd-main-content {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .cd-fixed-bg {
+    position: relative;
+    min-height: 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1170px;
+    text-align: left;
+    font-size: 30px;
+    font-size: 1.875rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: black;
+  }
+  .cd-fixed-bg.cd-bg-1 {
+    background-image: url("https://impactacademy.in/assets/img/gal-1.png");
+    background-position: top;
+  }
+  .cd-fixed-bg.cd-bg-2 {
+    background-image: url("https://images.unsplash.com/photo-1555597673-b21d5c935865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGthcmF0ZSUyMGltYWdlcyUyMG9uJTIwZ2lybHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+  }
+  .cd-fixed-bg.cd-bg-3 {
+    background-image: url("https://impactacademy.in/assets/img/gal-4.png");
+  }
+  .cd-fixed-bg.cd-bg-4 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/181085/track_riders_bg04.jpg");
+  }
+  @media only screen and (min-width: 320px) {
+    .cd-fixed-bg h1, .cd-fixed-bg h2 {
+      font-size: 36px;
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    .cd-fixed-bg {
+      background-attachment: fixed;
+    }
+    .cd-fixed-bg h1, .cd-fixed-bg h2 {
+      font-size: 48px;
+      font-weight: 300;
+    }
+  }
+  
+  .cd-scrolling-bg {
+    position: relative;
+    min-height: 50%;
+    padding: 4em 0;
+    line-height: 1.6;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+  .cd-scrolling-bg.cd-color-1 {
+    background-color: #3d3536;
+    color: #a6989a;
+  }
+  .cd-scrolling-bg.cd-color-2 {
+    background-color: #3d3536;
+    color: #a6989a;
+  }
+  .cd-scrolling-bg.cd-color-3 {
+    background-color: #3d3536;
+    color: #a6989a;
+  }
+  @media only screen and (min-width: 480px) {
+    .cd-scrolling-bg {
+      padding: 8em 0;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 2;
+      font-weight: 300;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: gray;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  /*   border: 1px solid red; */
+  }
+  
+  .fixed-nav-bar {
+    position: fixed;
+    align-items: flex-end;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+    display: flex;
+    line-height: 50px;
+  }
+  
+  nav img {
+    height: 50px;
+  }
+  
+  nav .brand {
+    flex: 1;
+    align-self: flex-start;
+    height: 50px;
+    margin-left: 10px;
+  }
+  
+  nav .link {
+    flex: 1;
+    max-width: max-content;
+    margin-right: 40px;
+  }
+  
+  .page-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page-container > .post {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .post > .link {
+    text-align: center;
+    font-family: courier;
+    font-size: 2.5em;
+    font-weight: lighter;
+    margin: 50px 0px;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  
+  
