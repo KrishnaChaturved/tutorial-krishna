@@ -65,7 +65,7 @@ main {
         padding: 10px;
         
         .grid-item {
-            background-color: #eeeeee;
+            background-color: black;
             display: flex;
             align-items: center;
             justify-content: center;
