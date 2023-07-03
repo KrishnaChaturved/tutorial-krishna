@@ -53,7 +53,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 15em);
+    height: 600px;
 
     .game-container {
         position: relative;
