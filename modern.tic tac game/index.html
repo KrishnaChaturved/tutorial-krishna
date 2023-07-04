@@ -59,19 +59,28 @@
         cell.classList.add("disabled");
         addInCell(cell, currentPlayer);
         if (winnerCheck(currentPlayer)) {
-          console.log(currentPlayer +"WINNER")
+          console.log(currentPlayer + "WINNER")
         }
-
+        if(isDraw());{
+        console.log("Draw the game");
+        }
 
         swapPlayer();
       }
     })
     function winnerCheck(currentPlayer) {
       return WINNING_CONDITIONS.some(condition => {
+        // console.log(condition);
       return condition.every(index=>{
         // console.log(index);
+        // console.log(cellElement[index].classList.contains(currentPlayer));
       return cellElement[index].classList.contains(currentPlayer);
           })
+      })
+    }
+    function isDraw(){
+      return [...cellElement].every(cell => {
+        return cell.classList.contains(playerX) || (playerO);
       })
     }
 

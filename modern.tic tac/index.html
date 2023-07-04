@@ -94,7 +94,7 @@ function _checkDraw() {
 }
 
 GRID_ITEMS.forEach((item) => {
-	item.addEventListener("click", e => {
+	item.addEventListener("clik", e => {
         if(e.currentTarget.innerText) return;
 		e.currentTarget.innerText = currentPlayer;
         if(_checkDraw()) {
