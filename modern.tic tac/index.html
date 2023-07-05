@@ -33,28 +33,16 @@
 
 <script>
    let currentPlayer = "";
-const nought = "o";
-const cross = "x";
+const nought = "O";
+const cross = "X";
 const currentPlayerEle = document.querySelector("#current-player");
 const overlayEle = document.querySelector(".overlay");
 const winnerMsgEle = document.querySelector(".winner-message");
 const restartEle = document.querySelector(".restart");
 const GRID_ITEMS = document.querySelectorAll(".grid-item");
-const WINNING_COMBOS = [
-    // Left / Right
-	[0, 1, 2],
-	[3, 4, 5],
-	[6, 7, 8],
-	
-    // Top / Down
-	[0, 3, 6],
-	[1, 4, 7],
-	[2, 5, 8],
-	
-    // Diagonal
-	[0, 4, 8],
-	[2, 4, 6]
-];
+const WINNING_COMBOS = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
+	                    [2, 5, 8], [1, 4, 7], [0, 3, 6], 
+                        [0, 4, 8], [2, 4, 6]  ];
 
 function init() {
     currentPlayer = cross;
@@ -94,11 +82,13 @@ function _checkDraw() {
 }
 
 GRID_ITEMS.forEach((item) => {
-	item.addEventListener("clik", e => {
+	item.addEventListener("click", e => {
         if(e.currentTarget.innerText) return;
 		e.currentTarget.innerText = currentPlayer;
         if(_checkDraw()) {
-            winnerMsgEle.innerText = `It's a Draw!`
+            winnerMsgEle.innerText = `Draw the game!`;
+
+
             overlayEle.classList.toggle("game-over");
             return;
         }

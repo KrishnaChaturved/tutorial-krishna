@@ -53,7 +53,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 575px;
 
     .game-container {
         position: relative;
@@ -63,6 +63,7 @@ main {
         gap: 10px;
         background: #34495e;
         padding: 10px;
+        margin: 0px;
         
         .grid-item {
             background-color: black;
