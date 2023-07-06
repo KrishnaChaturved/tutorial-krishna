@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revision 4</title>
+</head>
+
+<body>
+
+<h1>how many use ODD or EVEN numbers using only 1 to 100:-</h1>
+    <p id="even"></p>
+
+    <p id="odd"></p>
+    <script>
+        even = [];
+        odd = [];
+
+        for (i = 0; i <= 50; i++) {
+            if (i % 2 == 0) {
+                even.push([i]);
+                document.getElementById("even").innerHTML = "Even numbers from 0 to 100 are " + even;
+            }
+            else {
+                odd.push([i]);
+                // console.log([i] + " is odd number."); 
+                document.getElementById("odd").innerHTML = "Odd numbers from 0 to 100 are " + odd;
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
