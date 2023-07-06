@@ -96,7 +96,7 @@
                 }
 
                 if (_checkWin()) {
-                    winnerMsgEle.innerText = `${currentPlayer} Wins!`
+                    winnerMsgEle.innerText = `${currentPlayer} + ${currentPlayer} Wins!`
                     overlayEle.classList.toggle("game-over");
                     return;
                 }

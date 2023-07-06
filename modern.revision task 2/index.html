@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>what is your name ?</h1>
+        
+         <label>First Name</label> 
+        <input id="firstName" type="text"></input>
+        <label>last name</label>
+        <input id="lastName" type="text"></input>
+        <button id="submitButton" type="submit">Print Name</button>
+        <p id='result'></p>
+        </div>
+<script>
+function userNameInput () {
+  var firstName = document.getElementById('firstName').value;
+  var lastName = document.getElementById('lastName').value;
+  var result = document.getElementById('result');
+
+  if (firstName.length < 1) {
+       result.textContent = 'Name must contain at least 3 characters';
+   } else {
+       result.textContent = 'hi! Your name is: ' + firstName + ' last name is: ' + lastName;
+   }
+}
+
+submitButton.addEventListener('click', userNameInput, false);
+
+
+    // let div1 = document.createElement("div");
+    // div1.innerText = "div1";
+
+    // document.body.appendChild(div1);
+</script>
+</body>
+</html>
