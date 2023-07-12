@@ -9,19 +9,19 @@
 
 <body>
     <form method="POST" name="oddEven">
-        <p>Number <input type="text" name="T1" size="20">
-            is the number <input type="text" name="T2" size="20">
+        <p>Number <input type="text" name="t4" size="20">
+            is the number <input type="text" name="D1" size="20">
         </p>
         <p> <input type="button" value="CHECK" name="odd" onclick=test()>
         </p>
     </form>
     <script>
         function test() {
-            var val1 = document.oddEven.T1.value
+            var val1 = document.oddEven.t4.value
             if (val1 % 2 == 0)
-                document.oddEven.T2.value = "even number"
+                document.oddEven.D1.value = "even number"
             else
-                document.oddEven.T2.value = "odd number"
+                document.oddEven.D1.value = "odd number"
         }
     </script>
 

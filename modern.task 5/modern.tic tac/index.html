@@ -87,19 +87,18 @@
             item.addEventListener("click", e => {
                 if (e.currentTarget.innerText) return;
                 e.currentTarget.innerText = currentPlayer;
+                if (_checkWin()) {
+                    winnerMsgEle.innerText = `${currentPlayer} Wins!`
+                    overlayEle.classList.toggle("game-over");
+                    return;
+                }
                 if (_checkDraw()) {
                     winnerMsgEle.innerText = `Draw the game!`;
-
-
                     overlayEle.classList.toggle("game-over");
                     return;
                 }
 
-                if (_checkWin()) {
-                    winnerMsgEle.innerText = `${currentPlayer} + ${currentPlayer} Wins!`
-                    overlayEle.classList.toggle("game-over");
-                    return;
-                }
+               
                 _changeCurrentPlayer();
                 _showCurrentPlayer();
             });

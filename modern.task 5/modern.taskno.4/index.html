@@ -8,16 +8,20 @@
 </head>
 
 <body>
+    <h1>Display odd and even numbers from 0 to 100.</h1>
 
-<h1>how many use ODD or EVEN numbers using only 1 to 100:-</h1>
     <p id="even"></p>
 
     <p id="odd"></p>
+
     <script>
+
+
+
         even = [];
         odd = [];
 
-        for (i = 0; i <= 50; i++) {
+        for (i = 0; i <= 5; i++) {
             if (i % 2 == 0) {
                 even.push([i]);
                 document.getElementById("even").innerHTML = "Even numbers from 0 to 100 are " + even;
@@ -28,6 +32,7 @@
                 document.getElementById("odd").innerHTML = "Odd numbers from 0 to 100 are " + odd;
             }
         }
+
 
 
     </script>
